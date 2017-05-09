@@ -1,0 +1,125 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block head_title %}pecanducoffee{% endblock head_title %}</title>
+
+  <style>
+  {% block style %}
+  {% endblock style %}
+  </style>
+  <link rel='stylesheet' href="{% static 'css/bootstrap.css' %}" type='text/css' />
+  <link rel='stylesheet' href="{% static 'css/base.css' %}" type='text/css' />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="shortcut icon" type="image/ico" href="{% static 'css/pccoffee.jpg' %}" class="img-circle"> 
+</head>
+
+<body>
+   <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Special offer</a>
+                    </li>
+                    <li>
+                        <a href="#">Delivery</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+<!--
+                <form action="GET" class="navbar-search pull-left">
+                     <input id="srchFld" type="text" placeholder="I'm looking for ..." class="search-query span5"/>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User1<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Login</a></li>
+                      <li><a href="#">Sign Up</a></li>
+                       <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>  -->
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+  <div class="row">
+    <header class="hero-spacer">
+        <img src="{% static 'css/header-pc.png' %}" alt="" width="800px" height="200px"/>
+    </header>
+
+    <div class="container">
+    {% block content %}
+
+    {% endblock content %}
+
+    </div>
+
+<!-- Footer  -->
+<div class="panel-footer">
+  <div class="row">
+    <div class="container">
+      <h3>Contact Us</h3>
+
+      <div class="col-md-4 col-sm-6">
+          <div class="location-info">
+             <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span> - Bandung, West Java - Indonesia</p>
+             <p class="white"><span aria-hidden="true" class="fa fa-phone"></span> - Phone: +62 896 3142 9523</p>
+             <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span> - Email: <a href="" class="link-dec">pecanducoffee@gmail.com</a></p>
+          </div>                       
+      </div>
+      <div class="col-md-6">
+        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="https://twitter.com/pecanducoffee" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name"></span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/pc.coffee/" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name"></span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/pc.coffe" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name"></span></a>
+                            </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="intro-divider">
+    <div class="container">
+      <!-- <p class="pull-left">Building by &copy; denihandoko</p> -->
+      <p class="pull-right">&copy; 2017 pecanducoffee</p>
+    </div>
+  </div>
+</div><!-- /container -->
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+<div class="row">
+  <div class="container">
+      {% block content %}
+      <div class="col-md-8">
+        <h1>{{ instance.title }}</h1>
+        <p>{{ instance.content }}</p>
+        <p>harga = Rp. {{ instance.harga }},-</p>
+        {% if instance.image %}
+        <img src="{{ instance.image.url }}" class="img-responsive" />
+        {% endif %}
+      <br />
+      </div>
+      {% endblock content %}
+  </div>
+</div>
