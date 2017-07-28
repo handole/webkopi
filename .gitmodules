@@ -1,0 +1,3 @@
+[submodule "pecandukopi"]
+	path = pecandukopi
+	url = https://github.com/handole/pecandukopi.git
